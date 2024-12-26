@@ -19,9 +19,9 @@ phases:
       - echo Building the project...
       - npm run build
       - echo Checking build directory contents
-      - ls -la build
+      - ls -la dist
 artifacts:
   files:
     - '**/*'
   discard-paths: no #keep the directory structure in the artifacts bucket
-  base-directory: build #specify the directory to upload to the artifacts bucket
+  base-directory: dist #specify the directory to upload to the artifacts bucket
