@@ -4,8 +4,9 @@ phases:
   install:
     commands:
       - echo Installing nodejs...
-      - curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
-      - sudo apt-get install -y nodejs
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+      - source ~/.nvm/nvm.sh
+      - nvm install 22
       - echo Verifying node and npm version
       - node --version
       - npm --version
